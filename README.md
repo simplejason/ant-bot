@@ -11,7 +11,7 @@ $ vim .env
 $ yarn dev
 ```
 
-### a simplest action
+### a simplest action..
 
 ```javascript
 // src/actions/hello.js

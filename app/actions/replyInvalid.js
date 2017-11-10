@@ -3,11 +3,11 @@ const {commentIssue, closeIssue, getMembers, addLabels} = require('../../lib/git
 
 const comment = "\
 Hello @{user}, your issue has been closed because it does not conform to our \
-issue requirements. Please use the [Issue Helper](http://new-issue.ant.design?repo={repo}) \
+issue requirements. Please use the [Issue Helper](http://ng.ant.design/issue-helper/ \
 to create an issue, thank you!"
 
 let members = [];
-const repos = ['ng-zorro-antd', 'zorro-bot-test'];
+const repos = ['ng-zorro-antd'];
 
 function replyInvalid(on) {
     getMembers((error, res) => {
@@ -33,7 +33,7 @@ function replyInvalid(on) {
                 })
             );
 
-            if (repo === 'ng-zorro-antd' || repo === 'zorro-bot-test') {
+            if (repo === 'ng-zorro-antd') {
                 closeIssue(payload);
             }
             addLabels({
