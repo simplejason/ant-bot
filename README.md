@@ -11,7 +11,6 @@ $ vim .env
 $ yarn dev
 ```
 
-
 ### a simplest action
 
 ```javascript
