@@ -2,7 +2,7 @@ const format = require('string-template');
 const {commentIssue} = require('../../lib/github');
 
 const comment = {
-    'ng-zorro-antd': 'Hello @{user}. Please provide a re-producible demo: https://codepen.io/pen?template=KgPZrE&editors=0010',
+    'ng-zorro-antd': 'Hello @{user}. Please provide a re-producible demo: http://plnkr.co/edit/tpl:sKWy62 or https://stackblitz.com/edit/ng-zorro-antd-setup?file=app%2Fapp.component.ts',
 }
 
 function replyNeedDemo(on) {

@@ -3,7 +3,7 @@ const {commentIssue, closeIssue, getMembers, addLabels} = require('../../lib/git
 
 const comment = "\
 Hello @{user}, your issue has been closed because it does not conform to our \
-issue requirements. Please use the [Issue Helper](http://ng.ant.design/issue-helper/ \
+issue requirements. Please use the [Issue Helper]( http://ng.ant.design/issue-helper/#/new-issue ) \
 to create an issue, thank you!"
 
 let members = [];
@@ -13,14 +13,15 @@ function replyInvalid(on) {
     getMembers((error, res) => {
         if (res) {
             members = res.data.map(m => m.login);
+            console.log(members);
         }
-
     });
 
     on('issues_opened', ({payload, repo}) => {
-        if (repos.indexOf(repo) === -1) {
-            return;
-        }
+        // if (repos.indexOf(repo) === -1) {
+        //     return;
+        // }
+
         const {issue} = payload;
         const mark = 'ng-zorro-issue-helper';
         const opener = issue.user.login;
@@ -33,9 +34,10 @@ function replyInvalid(on) {
                 })
             );
 
-            if (repo === 'ng-zorro-antd') {
-                closeIssue(payload);
-            }
+            // if (repo === 'ng-zorro-antd') {
+            //     closeIssue(payload);
+            // }
+            closeIssue(payload);
             addLabels({
                 owner: payload.repository.owner.login,
                 repo: payload.repository.name,

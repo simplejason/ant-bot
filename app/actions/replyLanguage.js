@@ -11,10 +11,10 @@ function containsChinese(title) {
 function replyLanguage(on) {
   on('issues_opened', ({ payload }) => {
     if (containsChinese(payload.issue.title)) {
-      commentIssue(
-        payload,
-        comment
-      );
+      // commentIssue(
+      //   payload,
+      //   comment
+      // );
     }
   });
 }
