@@ -2,7 +2,7 @@ const format = require('string-template');
 const { commentIssue } = require('../../lib/github');
 const { mentioned } = require('../../lib/utils');
 
-const comment = "Hello @{user}, please format your issue in markdown https://segmentfault.com/markdown";
+const comment = "Hello @{user}, please format your issue in markdown. (https://guides.github.com/features/mastering-markdown/)";
 
 function replyMarkdown(on) {
   on('issue_comment_created', ({ payload }) => {

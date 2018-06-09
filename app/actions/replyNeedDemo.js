@@ -2,7 +2,7 @@ const format = require('string-template');
 const {commentIssue} = require('../../lib/github');
 
 const comment = {
-    'ng-zorro-antd': 'Hello @{user}. Please provide a re-producible demo: http://plnkr.co/edit/tpl:sKWy62 or https://stackblitz.com/edit/ng-zorro-antd-setup?file=app%2Fapp.component.ts',
+    'ng-zorro-antd': 'Hello @{user}. Please provide a re-producible demo: https://stackblitz.com/edit/ng-zorro-antd-start?file=src%2Fapp%2Fapp.component.ts',
 }
 
 function replyNeedDemo(on) {
