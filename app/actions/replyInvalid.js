@@ -3,7 +3,7 @@ const {commentIssue, closeIssue, getMembers, addLabels} = require('../../lib/git
 
 const comment = "\
 Hello @{user}, your issue has been closed because it does not conform to our \
-issue requirements. Please use the [Issue Helper]( http://ng.ant.design/issue-helper/en ) \
+issue requirements. Please use the [Issue Helper]( http://ng.ant.design/issue-helper/#/zh ) \
 to create an issue, thank you!"
 
 let members = [];
